@@ -1,38 +1,167 @@
-.App {
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Header styles */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 24px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Bot Collection styles */
+.bot-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.bot-profile {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.bot-profile:hover {
+  transform: translateY(-5px);
+}
+
+.bot-profile img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.bot-profile-details {
+  padding: 20px;
+}
+
+.bot-profile-details h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.bot-profile-details p {
+  margin: 5px 0;
+}
+
+/* Enlist button styles */
+.enlist-button {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  border-radius: 0 0 10px 10px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.enlist-button:hover {
+  background-color: #0056b3;
+}
+
+/* Your Bot Army styles */
+.your-bot-army {
+  width: 100%;
+  margin-top: 20px;
+  text-align: center; /* Center align h1, h2, h3 */
+}
+
+.army-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Spread out divs in the center */
+  gap: 20px;
+}
+
+.army-profile {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  width: calc(33.33% - 20px); /* Adjust based on desired layout */
+  margin-right: 20px; /* Add some spacing between army profiles */
+  margin-bottom: 20px; /* Add some spacing between army profiles */
+}
+
+.army-profile:hover {
+  transform: translateY(-5px);
+}
+
+.army-profile img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.army-profile-details {
+  padding: 20px;
+}
+
+.army-profile-details h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.army-profile-details p {
+  margin: 5px 0;
+}
+
+/* Release and Discharge button styles */
+.release-button,
+.discharge-button {
+  padding: 8px 16px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #dc3545;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.release-button:hover,
+.discharge-button:hover {
+  background-color: #bd2130;
+}
+
+/* SortBar styles */
+.sort-bar {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center; /* Center align sort bar items */
+  margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.sort-bar label {
+  font-size: 18px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sort-bar select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.sort-bar h3 {
+  margin-top: 20px;
 }
